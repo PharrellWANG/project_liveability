@@ -1,0 +1,1 @@
+from django.conf.urls import urlfrom django.contrib.staticfiles.urls import staticfiles_urlpatternsfrom django.views.generic import RedirectViewfrom . import viewsurlpatterns = [    url(r'^index/$', views.index, name='index'),]urlpatterns += staticfiles_urlpatterns()urlpatterns += [    url(r'^$', RedirectView.as_view(url='/index/', permanent=True)),]
