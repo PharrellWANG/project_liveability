@@ -1,0 +1,1 @@
+# import itfrom django.http import JsonResponsedef liangsongyitang_json(request):    # do something with the your data    data = []    t = {"1": 32, "2": 38}    data.append(t)    # just return a JsonResponse    return JsonResponse(t)
