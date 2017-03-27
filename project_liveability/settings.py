@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
+from django.utils.translation import ugettext_lazy as _
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -31,6 +32,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -125,6 +127,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# Others
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -134,21 +137,22 @@ LOGGING = {
             'datefmt': "%d/%b/%Y %H:%M:%S"
         },
     },
-    'handlers': {
-        'null': {
-            'level': 'DEBUG',
-            'class': 'logging.NullHandler',
+    'filters': {
+        'require_debug_true': {
+            '()': 'django.utils.log.RequireDebugTrue',
         },
+    },
+    'handlers': {
         'logfile': {
             'level': 'DEBUG',
             'class': 'logging.handlers.RotatingFileHandler',
-            'filename': "/home/ubuntu/interactive_table/cost_of_living" + "/logfile",
+            'filename': "/home/ubuntu/project_liveability/project_liveability" + "/logfile",
             'maxBytes': 50000,
             'backupCount': 2,
             'formatter': 'standard',
         },
         'console': {
-            'level': 'INFO',
+            'level': 'DEBUG',
             'class': 'logging.StreamHandler',
             'formatter': 'standard'
         },
@@ -161,13 +165,14 @@ LOGGING = {
         },
         'django.db.backends': {
             'handlers': ['console'],
-            'level': 'DEBUG',
-            'propagate': True,
+            'level': 'ERROR',
+            'propagate': False,
         },
-        'cost_of_living': {
+        'liveability': {
             'handlers': ['console', 'logfile'],
             'level': 'DEBUG',
-            'propagate': True,
+            # 'filters': ['special']
         },
     }
 }
+

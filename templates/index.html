@@ -23,6 +23,7 @@
 	<link rel="stylesheet" href="{% static '' %}canvas/css/magnific-popup.css" type="text/css" />
 
 	<link rel="stylesheet" href="{% static '' %}canvas/one-page/css/fonts.css" type="text/css" />
+    <link rel="stylesheet" href="{% static '' %}canvas/css/components/ion.rangeslider.css" type="text/css" />
 
 	<link rel="stylesheet" href="{% static '' %}canvas/css/responsive.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -133,6 +134,23 @@
             font-size: 14px;
             width: 14px
         }
+
+		.white-section {
+			background-color: #FFF;
+			padding: 25px 20px;
+			-webkit-box-shadow: 0px 1px 1px 0px #dfdfdf;
+			box-shadow: 0px 1px 1px 0px #dfdfdf;
+			border-radius: 3px;
+		}
+
+		.white-section label { margin-bottom: 30px; }
+
+		.dark .white-section {
+			background-color: #333;
+			-webkit-box-shadow: 0px 1px 1px 0px #444;
+			box-shadow: 0px 1px 1px 0px #444;
+		}
+
     </style>
 
 </head>
@@ -145,28 +163,65 @@
 
 		<div id="side-panel-trigger-close" class="side-panel-trigger"><a href="#"><i class="icon-line-cross"></i></a></div>
 
-		<div class="side-panel-wrap">
+{#		<div class="side-panel-wrap">#}
 
-			<div class="widget widget_links clearfix">
+{#					<address style="line-height: 1.7;">#}
+{#						795 Folsom Ave, Suite 600<br>#}
+{#						San Francisco, CA 94107<br>#}
+{#					</address>#}
+{##}
+{#					<div class="clear topmargin-sm"></div>#}
+{##}
+{#					<abbr title="Phone Number">Phone:</abbr> (91) 8547 632521<br>#}
+{#					<abbr title="Fax">Fax:</abbr> (91) 11 4752 1433<br>#}
+{#					<abbr title="Email Address">Email:</abbr> info@canvas.com#}
 
-				<h4>About </h4>
+                    <div>
+                        <form validate action="/s_action/" class="form-horizontal" id="s_form" method="GET">
+                            {% csrf_token %}
+                            <div class="form-body">
+                                <br>
+                                <br>
 
-				<div style="font-size: 14px; line-height: 1.7;">
-					<address style="line-height: 1.7;">
-						795 Folsom Ave, Suite 600<br>
-						San Francisco, CA 94107<br>
-					</address>
+                                <div class="white-section">
+{#                                    <label>Housing Cost</label>#}
+                                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="drag it to right if you prefer a lower price for buying house.">Housing Cost</button>
+{#                                    <span>drag it to right if you don't like spending a lot to buy a house</span>#}
+                                    <input class="range_01" id="id_rang_01" type="text" name="housing_cost" value=""/>
+                                </div>
 
-					<div class="clear topmargin-sm"></div>
+                                <div class="white-section">
+{#                                    <label>Dining Cost</label>#}
+                                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="drag it to right if you prefer a lower price for '兩餸一湯'.">Dining Cost</button>
+                                    <input class="range_002" id="id_rang_02" type="text" name="dining_cost" value=""/>
+                                </div>
 
-					<abbr title="Phone Number">Phone:</abbr> (91) 8547 632521<br>
-					<abbr title="Fax">Fax:</abbr> (91) 11 4752 1433<br>
-					<abbr title="Email Address">Email:</abbr> info@canvas.com
-				</div>
+                                <div class="white-section">
+{#                                    <label>Education Ranking</label>#}
+                                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="drag it to right if you have kids.">Education Ranking</button>
+                                    <input class="range_003" id="id_rang_03" type="text" name="education_ranking" value=""/>
+                                </div>
 
-			</div>
+                                <div class="white-section">
+{#                                    <label>Crime Rate</label>#}
+                                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="drag it to right if you want to live in a district of low crime rate.">Education Ranking</button>
+                                    <input class="range_004" id="id_rang_04" type="text" name="crime_rate" value=""/>
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <div class="row">
+                                    <div class="center">
+                                        <br>
+                                        <button type="submit" class="btn btn-primary "
+                                                id="invest_now">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
 
-		</div>
+                    </div>
+
+{#		</div>#}
 
 	</div>
 
@@ -232,8 +287,8 @@
 						<div class="vertical-middle">
 							<div class="emphasis-title">
 								<h1>
-									<span class="text-rotater nocolor" data-separator="|" data-rotate="fadeIn" data-speed="6000">
-										<span class="t-rotate t700 font-body opm-large-word">Welcome to Liveability |HKSTP DATA STUDIO</span>
+									<span class="text-rotater nocolor" data-separator="|" data-rotate="fadeIn" data-speed="3000">
+										<span class="t-rotate t400 font-body opm-large-word">Welcome to Liveability | A Journey of Discovering</span>
 									</span>
 								</h1>
 							</div>
@@ -296,7 +351,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="team-desc team-desc-bg">
-                                                        <div class="team-title"><h4>John Doe</h4><span>CEO</span></div>
+                                                        <div class="team-title"><h4>Andy</h4><span>CEO</span></div>
                                                     </div>
                                                 </div>
 
@@ -325,7 +380,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="team-desc team-desc-bg">
-                                                        <div class="team-title"><h4>Mary Jane</h4><span>Co-Founder</span></div>
+                                                        <div class="team-title"><h4>Andy's girl</h4><span>Co-Founder</span></div>
                                                     </div>
                                                 </div>
 
@@ -354,7 +409,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="team-desc team-desc-bg">
-                                                        <div class="team-title"><h4>Josh Clark</h4><span>Sales</span></div>
+                                                        <div class="team-title"><h4>Colin</h4><span>Data Scientist</span></div>
                                                     </div>
                                                 </div>
 
@@ -429,76 +484,80 @@
 			</div>
             <div class="container clearfix">
 
-					<div class="row topmargin-lg bottommargin-sm">
+					<div class="row topmargin-lg">
 
 						<div class="heading-block center">
-							<h2>Give me a Score</h2>
+
+
 							<span class="divcenter"></span>
-						</div>
-                        <div class="col-md-4 col-sm-6 bottommargin">
+                            <h3>Find the Most Suitable Place for Home</h3>
+                            <br>
+                            <button class="btn btn-primary btn-lg side-panel-trigger">
+                                Preferences
+                            </button>
 
-							<div class="feature-box topmargin" data-animate="fadeIn">
-								<div class="fbox-icon">
-									<a href="#"><i class="icon-line-check"></i></a>
-								</div>
-								<h1>90</h1>
-								<p>Score of <strong>Amenities</strong></p>
-							</div>
 
-							<div class="feature-box topmargin" data-animate="fadeIn" data-delay="200">
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 bottommargin">
+
+							<div class="feature-box topmargin" data-animate="fadeIn" data-delay="100">
 								<div class="fbox-icon">
-									<a href="#"><i class="icon-line-check"></i></a>
+									<a ><i class="icon-line-check"></i></a>
 								</div>
-								<h1>90</h1>
-                                <p>Score of  <strong>Cost of Living</strong></p>
-							</div>
-                            <div class="feature-box topmargin" data-animate="fadeIn" data-delay="400">
-								<div class="fbox-icon">
-									<a href="#"><i class="icon-line-check"></i></a>
-								</div>
-								<h1>90</h1>
-                                <p>Score of <strong>Crimes Rate</strong></p>
+								<h1 >90</h1>
+								<p>Score of <strong>Housing Cost</strong></p>
 							</div>
 						</div>
 
-						<div class="col-md-4 col-sm-6 bottommargin">
-
-							<div class="feature-box topmargin" data-animate="fadeIn">
-								<div class="fbox-icon">
-									<a href="#"><i class="icon-line-check"></i></a>
-								</div>
-								<h1>90</h1>
-								<p>Score of <strong>Education</strong></p>
-							</div>
-
+                        <div class="col-md-3 col-sm-6 bottommargin">
 							<div class="feature-box topmargin" data-animate="fadeIn" data-delay="200">
 								<div class="fbox-icon">
-									<a href="#"><i class="icon-line-check"></i></a>
+									<a ><i class="icon-line-check"></i></a>
 								</div>
 								<h1>90</h1>
-								<p>Score of <strong>Employment</strong></p>
+                                <p>Score of  <strong>Dining Cost</strong></p>
 							</div>
+						</div>
+
+						<div class="col-md-3 col-sm-6 bottommargin">
+
+							<div class="feature-box topmargin" data-animate="fadeIn" data-delay="300">
+								<div class="fbox-icon">
+									<a><i class="icon-line-check"></i></a>
+								</div>
+								<h1>90</h1>
+								<p>Score of <strong>Education Ranking</strong></p>
+							</div>
+
+{#							<div class="feature-box topmargin" data-animate="fadeIn" data-delay="200">#}
+{#								<div class="fbox-icon">#}
+{#									<a ><i class="icon-line-check"></i></a>#}
+{#								</div>#}
+{#								<h1>90</h1>#}
+{#								<p>Score of <strong>Employment</strong></p>#}
+{#							</div>#}
 
 
 
 						</div>
-                        <div class="col-md-4 col-sm-6 bottommargin">
+                        <div class="col-md-3 col-sm-6 bottommargin">
 
-							<div class="feature-box topmargin" data-animate="fadeIn">
+							<div class="feature-box topmargin" data-animate="fadeIn" data-delay="400">
 								<div class="fbox-icon">
-									<a href="#"><i class="icon-line-check"></i></a>
+									<a ><i class="icon-line-check"></i></a>
 								</div>
-								<h1>90</h1>
-								<p>Score of <strong>Housing</strong></p>
+								<h1 id="value_001">90</h1>
+								<p>Score of <strong>Crime Rate</strong></p>
 							</div>
 
-							<div class="feature-box topmargin" data-animate="fadeIn" data-delay="200">
-								<div class="fbox-icon">
-									<a href="#"><i class="icon-line-check"></i></a>
-								</div>
-								<h1>90</h1>
-								<p>Score of <strong>Weather</strong></p>
-							</div>
+{#							<div class="feature-box topmargin" data-animate="fadeIn" data-delay="200">#}
+{#								<div class="fbox-icon">#}
+{#									<a><i class="icon-line-check"></i></a>#}
+{#								</div>#}
+{#								<h1>90</h1>#}
+{#								<p>Score of <strong>Weather</strong></p>#}
+{#							</div>#}
 
 {#							<div class="feature-box topmargin" data-animate="fadeIn" data-delay="400">#}
 {#								<div class="fbox-icon">#}
@@ -511,6 +570,79 @@
 						</div>
 
 					</div>
+{#                    <div class="row">#}
+{##}
+{#                            <div class="col-md-3 col-sm-6 bottommargin">#}
+{##}
+{#                                <div class="feature-box topmargin" data-animate="fadeIn" data-delay="100">#}
+{#                                    <div class="fbox-icon">#}
+{#                                        <a ><i class="icon-line-check"></i></a>#}
+{#                                    </div>#}
+{#                                    <h1>90</h1>#}
+{#                                    <p>Score of <strong>Housing Cost</strong></p>#}
+{#                                </div>#}
+{#                            </div>#}
+{##}
+{#                            <div class="col-md-3 col-sm-6 bottommargin">#}
+{#                                <div class="feature-box topmargin" data-animate="fadeIn" data-delay="200">#}
+{#                                    <div class="fbox-icon">#}
+{#                                        <a ><i class="icon-line-check"></i></a>#}
+{#                                    </div>#}
+{#                                    <h1>90</h1>#}
+{#                                    <p>Score of  <strong>Dining Cost</strong></p>#}
+{#                                </div>#}
+{#                            </div>#}
+{##}
+{#                            <div class="col-md-3 col-sm-6 bottommargin">#}
+{##}
+{#                                <div class="feature-box topmargin" data-animate="fadeIn" data-delay="300">#}
+{#                                    <div class="fbox-icon">#}
+{#                                        <a><i class="icon-line-check"></i></a>#}
+{#                                    </div>#}
+{#                                    <h1>90</h1>#}
+{#                                    <p>Score of <strong>Education Ranking</strong></p>#}
+{#                                </div>#}
+{##}
+    {#							<div class="feature-box topmargin" data-animate="fadeIn" data-delay="200">#}
+    {#								<div class="fbox-icon">#}
+    {#									<a ><i class="icon-line-check"></i></a>#}
+    {#								</div>#}
+    {#								<h1>90</h1>#}
+    {#								<p>Score of <strong>Employment</strong></p>#}
+    {#							</div>#}
+{##}
+{##}
+{##}
+{#                            </div>#}
+{#                            <div class="col-md-3 col-sm-6 bottommargin">#}
+{##}
+{#                                <div class="feature-box topmargin" data-animate="fadeIn" data-delay="400">#}
+{#                                    <div class="fbox-icon">#}
+{#                                        <a ><i class="icon-line-check"></i></a>#}
+{#                                    </div>#}
+{#                                    <h1>90</h1>#}
+{#                                    <p>Score of <strong>Crime Rate</strong></p>#}
+{#                                </div>#}
+{##}
+    {#							<div class="feature-box topmargin" data-animate="fadeIn" data-delay="200">#}
+    {#								<div class="fbox-icon">#}
+    {#									<a><i class="icon-line-check"></i></a>#}
+    {#								</div>#}
+    {#								<h1>90</h1>#}
+    {#								<p>Score of <strong>Weather</strong></p>#}
+    {#							</div>#}
+{##}
+    {#							<div class="feature-box topmargin" data-animate="fadeIn" data-delay="400">#}
+    {#								<div class="fbox-icon">#}
+    {#									<a href="#"><i class="icon-bulb"></i></a>#}
+    {#								</div>#}
+    {#								<h3>Light &amp; Dark Color Schemes</h3>#}
+    {#								<p>Change your Website's Primary Scheme instantly by simply adding the dark class.</p>#}
+    {#							</div>#}
+{##}
+{#                            </div>#}
+{##}
+{#                        </div>#}
 
 				</div>
             <div class="row clearfix bottommargin-lg common-height">
@@ -593,10 +725,123 @@
 	============================================= -->
 	<script type="text/javascript" src="{% static '' %}canvas/js/jquery.js"></script>
 	<script type="text/javascript" src="{% static '' %}canvas/js/plugins.js"></script>
+    <script type="text/javascript" src="{% static '' %}canvas/js/components/rangeslider.min.js"></script>
+    <script type="text/javascript" src="{% static '' %}canvas/js/components/moment.js"></script>
+
 
 	<!-- Footer Scripts
 	============================================= -->
 	<script type="text/javascript" src="{% static '' %}canvas/js/functions.js"></script>
+
+
+    <script type="text/javascript">
+        var frm = $('#s_form');
+        frm.submit(function () {
+            $.ajax({
+                type: frm.attr('method'),
+                url: frm.attr('action'),
+                data: frm.serialize(),
+
+                contentType: "application/json",
+                success: function (response) {
+{#                    alert(response);#}
+                    $("#value_001").html(response["jianshazui"]);
+                },
+                error: function () {
+                    alert("error loading json ")
+                }
+            });
+            return false;
+        });
+    </script>
+
+    	<script type="text/javascript">
+
+		$(document).ready(function () {
+            {#------------------------------------------------------------------------------------------------#}
+            {#------------------------------------------------------------------------------------------------#}
+            {#------------------------------------------------------------------------------------------------#}
+            {#------------------------------------------------------------------------------------------------#}
+            var my_value = 0;
+		    var $range = $(".range_01");
+		    var from1 = 66;
+            var saveResult = function (data) {
+                from1 = data.from1;
+            };
+
+			$range.ionRangeSlider(
+                {
+                    from: from1,
+                    onStart: function (data) {
+                        saveResult(data);
+                    },
+                    onChange: function (data) {
+                        saveResult(data);
+                    },
+                    onFinish: function (data) {
+                        saveResult(data);
+                    }
+                }
+            );
+			$range.on("change", function () {
+                var $this = $(this),
+                    value1 = $this.prop("value");
+{#                    my_value = value1;#}
+
+                console.log("Value: " + value1);
+                my_value = value1;
+                console.log(from1)
+            });
+
+			console.log("my value : " + my_value)
+{#------------------------------------------------------------------------------------------------#}
+			var $range002 = $(".range_002");
+			$range002.ionRangeSlider(
+                {
+                    from: 49
+                }
+            );
+			$range002.on("change", function () {
+                var $this = $(this),
+                    value2 = $this.prop("value");
+
+{#                console.log("Value: " + value2);#}
+            });
+{#------------------------------------------------------------------------------------------------#}
+			var $range003 = $(".range_003");
+			$range003.ionRangeSlider(
+                {
+                    from: 52
+                }
+            );
+			$range003.on("change", function () {
+                var $this = $(this),
+                    value3 = $this.prop("value");
+
+{#                console.log("Value: " + value3);#}
+            });
+{#------------------------------------------------------------------------------------------------#}
+			var $range004 = $(".range_004");
+			$range004.ionRangeSlider(
+                {
+                    from: 58
+                }
+            );
+			$range004.on("change", function () {
+                var $this = $(this),
+                    value4 = $this.prop("value");
+
+{#                console.log("Value: " + value4);#}
+            });
+
+
+            {#------------------------------------------------------------------------------------------------#}
+            {#------------------------------------------------------------------------------------------------#}
+            {#------------------------------------------------------------------------------------------------#}
+            {#------------------------------------------------------------------------------------------------#}
+		});
+
+	</script>
 <script>
     var mapStyle = [{
         'stylers': [{'visibility': 'off'}]
