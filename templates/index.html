@@ -505,7 +505,7 @@
 								<div class="fbox-icon">
 									<a ><i class="icon-line-check"></i></a>
 								</div>
-								<h1 >90</h1>
+								<h1 id="score_housing">90</h1>
 								<p>Score of <strong>Housing Cost</strong></p>
 							</div>
 						</div>
@@ -515,7 +515,7 @@
 								<div class="fbox-icon">
 									<a ><i class="icon-line-check"></i></a>
 								</div>
-								<h1>90</h1>
+								<h1 id="score_dining">90</h1>
                                 <p>Score of  <strong>Dining Cost</strong></p>
 							</div>
 						</div>
@@ -526,7 +526,7 @@
 								<div class="fbox-icon">
 									<a><i class="icon-line-check"></i></a>
 								</div>
-								<h1>90</h1>
+								<h1 id="score_edu">90</h1>
 								<p>Score of <strong>Education Ranking</strong></p>
 							</div>
 
@@ -547,7 +547,7 @@
 								<div class="fbox-icon">
 									<a ><i class="icon-line-check"></i></a>
 								</div>
-								<h1 id="value_001">90</h1>
+								<h1 id="score_cr">90</h1>
 								<p>Score of <strong>Crime Rate</strong></p>
 							</div>
 
@@ -650,8 +650,9 @@
 					<div class="col-md-12 col-sm-12 dark center col-padding" style="background-color: #515875;">
 						<div>
 							<i class="i-plain i-xlarge divcenter icon-line2-directions"></i>
-                            <div class="counter counter-lined"><span data-from="1" data-to="84" data-refresh-interval="50" data-speed="2000"></span></div>
-							<h5>Best District: cw</h5>
+                            <div class="counter counter-lined"><span data-from="1" data-to="99" id="value_best_sco" data-refresh-interval="50" data-speed="2000"></span></div>
+							<h5 id="value_best_dis">Which is the best district for you?</h5>
+                            <br>
 						</div>
 					</div>
 				</div>
@@ -745,7 +746,13 @@
                 contentType: "application/json",
                 success: function (response) {
 {#                    alert(response);#}
-                    $("#value_001").html(response["jianshazui"]);
+                    $("#score_cr").html(response["cr"]);
+                    $("#score_dining").html(response["dining"]);
+                    $("#score_housing").html(response["housing"]);
+                    $("#score_edu").html(response["edu"]);
+
+                    $("#value_best_dis").html(response["best_dis"]);
+                    $("#value_best_sco").html(response["best_sco"]);
                 },
                 error: function () {
                     alert("error loading json ")
