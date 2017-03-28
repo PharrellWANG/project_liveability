@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="liveability@192.168.243.134" uuid="7065a346-cf0d-4765-93ff-66b7735aae1c">
+    <data-source source="LOCAL" name="liveability@192.168.0.157" uuid="7065a346-cf0d-4765-93ff-66b7735aae1c">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://192.168.243.134:5432/liveability</jdbc-url>
+      <jdbc-url>jdbc:postgresql://192.168.0.157:5432/liveability</jdbc-url>
     </data-source>
   </component>
 </project>
