@@ -21,4 +21,8 @@ class TwoDishesOneSoupIdx(models.Model):
     ave_price = models.FloatField(null=True)
 
 
-# class CrimeRate
+class HousePricePerSquareInch(models.Model):
+    district_en = models.CharField(max_length=45, null=True)
+    district_ch = models.CharField(max_length=45, null=True)
+    # source_street_chn_name = models.CharField(max_length=45, null=True)
+    ave_price = models.FloatField(null=True)
