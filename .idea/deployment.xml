@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="ssh://ubuntu@192.168.0.157:22/usr/bin/python" autoUploadExternalChanges="true">
+  <component name="PublishConfigData" autoUpload="Always" serverName="ssh://ubuntu@192.168.234.134:22/usr/bin/python" autoUploadExternalChanges="true">
     <serverData>
-      <paths name="ssh://ubuntu@192.168.0.157:22/usr/bin/python">
+      <paths name="ssh://ubuntu@192.168.234.134:22/usr/bin/python">
         <serverdata>
           <mappings>
             <mapping deploy="/home/ubuntu/project_liveability" local="$PROJECT_DIR$" />
