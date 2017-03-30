@@ -19,3 +19,6 @@ class TwoDishesOneSoupIdx(models.Model):
     district_ch = models.CharField(max_length=45, null=True)
     source_street_chn_name = models.CharField(max_length=45, null=True)
     ave_price = models.FloatField(null=True)
+
+
+# class CrimeRate
