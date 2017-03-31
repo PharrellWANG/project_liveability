@@ -65,3 +65,16 @@ class PopulationAndArea(models.Model):
     district_en = models.CharField(max_length=50, null=True)
     population = models.IntegerField(null=True)
     area = models.FloatField(null=True)
+
+
+class Employment(models.Model):
+    district_ch = models.CharField(max_length=10, null=True)
+    district_en = models.CharField(max_length=50, null=True)
+    median_monthly_household_income = models.FloatField(null=True)
+    poverty_rate = models.FloatField(null=True)
+
+
+class Weather(models.Model):
+    district_ch = models.CharField(max_length=10, null=True)
+    district_en = models.CharField(max_length=50, null=True)
+    air_quality_health_index = models.FloatField(null=True)
