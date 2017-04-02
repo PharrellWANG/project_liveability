@@ -263,32 +263,32 @@
 							<tr>
 {#							  <td rowspan="2">1</td>#}
 {#                                <td bgcolor="#b9d3c2" height="200" width="285" align="center" valign="middle"><font size="+600" color="#faebd7"><strong>Liveability</strong></font></td>#}
-                                <td bgcolor="#b9d3c2" height="200" width="295" align="center" valign="middle">
+                                <td bgcolor="#7fc8ed" height="200" width="295" align="center" valign="middle">
                                     <font size="+600" color="#fafad2"><strong>Liveability</strong></font></td>
-							  <td bgcolor="#b9d3c2" height="200" width="295" align="center" valign="middle" >
+							  <td bgcolor="#7fc8ed" height="200" width="295" align="center" valign="middle" >
                                   <font size="+800" color="#fafad2"><strong id="value_best_sco" class="font-body opm-large-word">99</strong></font></td>
 {#                                <span class="t-rotate t400 font-body opm-large-word">Welcome to Liveability | A Journey of Discovering</span>#}
 {#							  <td>@mdo</td>#}
 							</tr>
 							<tr>
 {#							  <td>3</td>#}
-							  <td bgcolor="#b9d3c2" height="200" width="295" align="center" valign="middle">
+							  <td bgcolor="#7fc8ed" height="200" width="295" align="center" valign="middle">
                                     <font size="+600" color="#f5f5f5"><strong>Best District</strong></font></td>
-							  <td bgcolor="#b9d3c2" height="200" width="295" align="center" valign="middle" >
+							  <td bgcolor="#7fc8ed" height="200" width="295" align="center" valign="middle" >
                                   <font size="+800" color="#f5f5f5"><strong id="value_best_dis" >Tai Po</strong></font></td>
 {#							  <td>@twitter</td>#}
 							</tr>
                             <tr>
-							  <td bgcolor="#b9d3c2" height="200" width="295" align="center" valign="middle">
+							  <td bgcolor="#7fc8ed" height="200" width="295" align="center" valign="middle">
                                     <font size="+600" color="#f5f5f5"><strong>Population</strong></font></td>
-							  <td bgcolor="#b9d3c2" height="200" width="295" align="center" valign="middle" >
+							  <td bgcolor="#7fc8ed" height="200" width="295" align="center" valign="middle" >
                                   <font size="+800" color="#f5f5f5"><strong id="value_popu">9869</strong></font></td>
 							</tr>
 							<tr>
 {#							  <td>2</td>#}
-							  <td bgcolor="#b9d3c2" height="200" width="295" align="center" valign="middle">
+							  <td bgcolor="#7fc8ed" height="200" width="295" align="center" valign="middle">
                                     <font size="+600" color="#f5f5f5"><strong>Area</strong></font></td>
-							  <td bgcolor="#b9d3c2" height="200" width="295" align="center" valign="middle" >
+							  <td bgcolor="#7fc8ed" height="200" width="295" align="center" valign="middle" >
                                   <font size="+800" color="#f5f5f5"><strong id="value_area" >67</strong></font></td>
 {#							  <td>@fat</td>#}
 							</tr>
@@ -798,16 +798,16 @@
         var xhr = new XMLHttpRequest();
         {#        xhr.open('GET', variable + '.json');#}
         if (variable == "liangsongyitang") {
-            xhr.open('GET', 'http://192.168.243.134:1234/tdone_api/');
+            xhr.open('GET', 'http://202.130.117.30:8081/tdone_api/');
         }
         else if (variable == "edu") {
-            xhr.open('GET', 'http://192.168.243.134:1234/edu_api/');
+            xhr.open('GET', 'http://202.130.117.30:8081/edu_api/');
         }
         else if (variable == "house") {
-            xhr.open('GET', 'http://192.168.243.134:1234/hp_api/');
+            xhr.open('GET', 'http://202.130.117.30:8081/hp_api/');
         }
         else if (variable == "cr") {
-            xhr.open('GET', 'http://192.168.243.134:1234/cr_api/');
+            xhr.open('GET', 'http://202.130.117.30:8081/cr_api/');
         }
 
         xhr.onload = function () {
