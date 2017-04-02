@@ -332,14 +332,14 @@
 
 					<div class="col-md-3 col-sm-6 dark center col-padding" style="background-color: #809a89;">
 						<div>
-							<i class="i-plain i-xlarge divcenter icon-line2-directions"></i>
+							<i class="i-plain i-xlarge divcenter icon-line2-home"></i>
 							<div class="counter counter-lined"><span id="score_housing" data-from="0" data-to="99" data-refresh-interval="50" data-speed="5000"></span><h1></h1></div>
                             <h1>Housing Cost</h1>
 						</div>
 					</div>
                     <div class="col-md-3 col-sm-6 dark center col-padding" style="background-color: #809a89;">
 						<div>
-							<i class="i-plain i-xlarge divcenter icon-line2-layers"></i>
+							<i class="i-plain i-xlarge divcenter icon-line2-basket"></i>
 							<div class="counter counter-lined"><span id="score_dining" data-from="0" data-to="99" data-refresh-interval="50" data-speed="5000"></span><h1></h1></div>
 							<h1>Dining Cost</h1>
 						</div>
@@ -347,7 +347,7 @@
 
 					<div class="col-md-3 col-sm-6 dark center col-padding" style="background-color: #809a89;">
 						<div>
-							<i class="i-plain i-xlarge divcenter icon-line2-layers"></i>
+							<i class="i-plain i-xlarge divcenter icon-line2-graduation"></i>
 							<div class="counter counter-lined"><span id="score_edu" data-from="0" data-to="99" data-refresh-interval="50" data-speed="5000"></span><h1></h1></div>
 							<h1>Education Rank</h1>
 						</div>
@@ -355,7 +355,7 @@
 
 					<div class="col-md-3 col-sm-6 dark center col-padding" style="background-color: #809a89;">
 						<div>
-							<i class="i-plain i-xlarge divcenter icon-line2-layers"></i>
+							<i class="i-plain i-xlarge divcenter icon-line2-ghost"></i>
 							<div class="counter counter-lined"><span id="score_cr" data-from="0" data-to="99" data-refresh-interval="50" data-speed="5000"></span><h1></h1></div>
 							<h1>Crime Rate</h1>
 						</div>
@@ -543,6 +543,7 @@
 {#						</div>#}
 {#					</div>#}
 {#				</div>#}
+            <div><iframe width="100%" height="800px" src="https://esrihk.maps.arcgis.com/apps/MapJournal/index.html?appid=c4cf5eafc03740c8b8c67a59c0e0777e" frameborder="0" scrolling="no"></iframe></div>
 
 		</section><!-- #content end -->
 
@@ -563,7 +564,7 @@
 								<ul class="list-unstyled footer-site-links nobottommargin">
 									<li><a href="#" data-scrollto="#wrapper" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">Top</a></li>
 									<li><a href="#" data-scrollto="#section-works" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">Liveability on Map</a></li>
-                                    <li><a href="#" data-scrollto="#section-about" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">About</a></li>
+{#                                    <li><a href="#" data-scrollto="#section-about" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">About</a></li>#}
 								</ul>
 							</div>
 
@@ -597,7 +598,7 @@
 
 			<div id="copyrights">
 				<div class="container center clearfix">
-					2017 &copy; HKSTP Data Studio | All Rights Reserved
+					2017 &copy; HKSTP Data Studio
 				</div>
 			</div>
 
@@ -624,17 +625,110 @@
     <script type="text/javascript" src="{% static '' %}my_js/ajax.js"></script>
     <script type="text/javascript" src="{% static '' %}my_js/multi_slider.js"></script>
 <script>
-    var mapStyle = [{
-        'stylers': [{'visibility': 'off'}]
-    }, {
-        'featureType': 'landscape',
-        'elementType': 'geometry',
-        'stylers': [{'visibility': 'on'}, {'color': '#fcfcfc'}]
-    }, {
-        'featureType': 'water',
-        'elementType': 'geometry',
-        'stylers': [{'visibility': 'on'}, {'color': '#bfd4ff'}]
-    }];
+    var mapStyle = [
+    {
+        "featureType": "all",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#f3f4f4"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape.man_made",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "weight": 0.9
+            },
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "poi.park",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#83cead"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#ffffff"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#fee379"
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#fee379"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#7fc8ed"
+            }
+        ]
+    }
+]
     var map;
     var censusMin = Number.MAX_VALUE, censusMax = -Number.MAX_VALUE;
 
@@ -649,20 +743,20 @@
         });
 
         // Add a style-selector control to the map.
-        var styleControl = document.getElementById('style-selector-control');
-        map.controls[google.maps.ControlPosition.TOP_LEFT].push(styleControl);
+{#        var styleControl = document.getElementById('style-selector-control');#}
+{#        map.controls[google.maps.ControlPosition.TOP_LEFT].push(styleControl);#}
 
         // Set the map's style to the initial value of the selector.
-        var styleSelector = document.getElementById('style-selector');
+{#        var styleSelector = document.getElementById('style-selector');#}
 
 {#        console.log("style selector is "+styleSelector);#}
-        map.setOptions({styles: styles[styleSelector.value]});
+{#        map.setOptions({styles: styles[styleSelector.value]});#}
 
 
         // Apply new JSON when the user selects a different style.
-        styleSelector.addEventListener('change', function () {
-            map.setOptions({styles: styles[styleSelector.value]});
-        });
+{#        styleSelector.addEventListener('change', function () {#}
+{#            map.setOptions({styles: styles[styleSelector.value]});#}
+{#        });#}
 
 
         // set up the style rules and events for google.maps.Data
@@ -704,16 +798,16 @@
         var xhr = new XMLHttpRequest();
         {#        xhr.open('GET', variable + '.json');#}
         if (variable == "liangsongyitang") {
-            xhr.open('GET', '{% static '' %}json_data/liangsongyitang.json');
+            xhr.open('GET', 'http://192.168.243.134:1234/tdone_api/');
         }
         else if (variable == "edu") {
-            xhr.open('GET', '{% static '' %}json_data/edu.json');
+            xhr.open('GET', 'http://192.168.243.134:1234/edu_api/');
         }
         else if (variable == "house") {
-            xhr.open('GET', '{% static '' %}json_data/house.json');
+            xhr.open('GET', 'http://192.168.243.134:1234/hp_api/');
         }
         else if (variable == "cr") {
-            xhr.open('GET', '{% static '' %}json_data/cr.json');
+            xhr.open('GET', 'http://192.168.243.134:1234/cr_api/');
         }
 
         xhr.onload = function () {

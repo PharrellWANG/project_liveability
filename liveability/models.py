@@ -11,6 +11,7 @@ class Scores(models.Model):
     dining_cost = models.IntegerField(null=True)
     crime_rate = models.IntegerField(null=True)
     edu_rank = models.IntegerField(null=True)
+    real_crime_rate = models.FloatField(null=True)
     # house_cost = models.IntegerField()
 
 
