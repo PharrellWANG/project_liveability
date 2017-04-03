@@ -41,7 +41,7 @@
 
 </head>
 
-<body class="stretched" >
+<body class="stretched" bgcolor="#7fc8ed">
 
 	<div class="body-overlay"></div>
 
@@ -136,20 +136,20 @@
 					============================================= -->
 					<nav id="primary-menu">
 
-						<ul class="one-page-menu" data-easing="easeInOutExpo" data-speed="1250" data-offset="65">
-							<li><a href="#" data-href="#wrapper"><div>Home</div></a></li>
+{#						<ul class="one-page-menu" data-easing="easeInOutExpo" data-speed="1250" data-offset="65">#}
+{#							<li><a href="#" data-href="#wrapper"><div>Home</div></a></li>#}
 {#                            <li><a href="#" data-href="#section-about"><div>About</div></a></li>#}
-							<li>
-                                <a href="#" data-href="#section-works">
-
-                                <div>Liveability on Map</div>
-                                </a>
-                            </li>
+{#							<li>#}
+{#                                <a href="#" data-href="#section-works">#}
+{##}
+{#                                <div>Liveability on Map</div>#}
+{#                                </a>#}
+{#                            </li>#}
 
 {#							<li><a href="#" data-href="#section-services"><div>Services</div></a></li>#}
 {#							<li><a href="#" data-href="#section-blog"><div>Blog</div></a></li>#}
 {#							<li><a href="#" data-href="#section-contact"><div>Contact</div></a></li>#}
-						</ul>
+{#						</ul>#}
 
 						<div id="side-panel-trigger" class="side-panel-trigger"><a href="#"><i class="icon-reorder"></i></a></div>
 
@@ -196,11 +196,11 @@
 
 		<!-- Content
 		============================================= -->
-		<section id="content">
+		<section id="content" >
 
-			<div class="content-wrap nopadding">
+{#			<div class="content-wrap nopadding">#}
 
-				<div id="section-works" class="page-section ">
+{#				<div id="section-works" class="page-section " >#}
 
 
 {#                    <div class="container clearfix">#}
@@ -215,17 +215,20 @@
                     <div id="controls" class="nicebox">
                         <div>
                             <select id="census-variable">
+
+
+                                <option value="house">
+                                    Housing
+                                </option>
                                 <option value="liangsongyitang">
-                                    2016 年「兩餸一湯」平均價格
+{#                                    2016 年「兩餸一湯」平均價格#}
+                                    Cost of Living
                                 </option>
                                 <option value="edu">
-                                    Primary School Ranking
-                                </option>
-                                <option value="house">
-                                    House Pricing
+                                    Education
                                 </option>
                                 <option value="cr">
-                                    crime rate
+                                    Crime
                                 </option>
                             </select>
                         </div>
@@ -235,10 +238,10 @@
                             <div id="census-max">max</div>
                         </div>
                         </div>
-                    <div id="data-box" class="nicebox">
-                        <label id="data-label" for="data-value"></label>
-                        <span id="data-value"></span>
-                    </div>
+{#                    <div id="data-box" class="nicebox">#}
+{#                        <label id="data-label" for="data-value"></label>#}
+{#                        <span id="data-value"></span>#}
+{#                    </div>#}
 
                     <div id="style-selector-control" class="map-control">
                         <select id="style-selector" class="selector-control">
@@ -249,113 +252,225 @@
                         </select>
                     </div>
 
-                    <div class="col_one_third nobottommargin col_last">
-                        <table>
-{#						  <thead>#}
+                    <div class="col_one_third nobottommargin col_last"  >
+                          <label for="data-value"></label>
+
+
+{#                        <table>#}
+{#						  <tbody>#}
+{#                          <label for="data-value"></label>#}
 {#							<tr>#}
-{#							  <th>#</th>#}
-{#							  <th>First Name</th>#}
-{#							  <th>Last Name</th>#}
-{#							  <th>Username</th>#}
-{#							</tr>#}
-{#						  </thead>#}
-						  <tbody>
-							<tr>
 {#							  <td rowspan="2">1</td>#}
 {#                                <td bgcolor="#b9d3c2" height="200" width="285" align="center" valign="middle"><font size="+600" color="#faebd7"><strong>Liveability</strong></font></td>#}
-                                <td bgcolor="#7fc8ed" height="150" width="295" align='right' valign="middle">
+{#                                <td bgcolor="#7fc8ed" height="150" width="295" align='right' valign="middle">#}
 {#                                    <font size="+600" color="#fafad2"><strong>Liveability</strong></font>#}
-                                    <p class="small"><span style="font-family: 'LiHei Pro';font-size: 72px;color: #FFFFFF">荃灣</span></p>
-                                </td>
-							  <td bgcolor="#7fc8ed" height="150" width="295" align="left" valign="middle" >
+{#                                    <p class="small"><span style="font-family: 'LiHei Pro';font-size: 72px;color: #FFFFFF">荃灣</span></p>#}
+{#                                </td>#}
+{#							  <td bgcolor="#7fc8ed" height="150" width="295" align="left" valign="middle" >#}
 {#                                  <font size="+800" color="#fafad2"><strong id="value_best_sco" class="font-body opm-large-word">99</strong></font>#}
-                                  <p class="small"><span style="font-family: 'Gloucester MT Extra Condensed'; font-size: 170px; text-align: left; color: #FFFFFF" id="value_best_sco">87</span></p>
-                              </td>
+{#                                  <p class="small"><span style="font-family: 'Gloucester MT Extra Condensed'; font-size: 170px; text-align: left; color: #FFFFFF" id="value_best_sco">87</span></p>#}
+{#                              </td>#}
 {#                                <span class="t-rotate t400 font-body opm-large-word">Welcome to Liveability | A Journey of Discovering</span>#}
 {#							  <td>@mdo</td>#}
-							</tr>
-							<tr>
+{#							</tr>#}
+{#							<tr>#}
 {#							  <td>3</td>#}
 {#							  <td bgcolor="#7fc8ed" height="200" width="295" align="center" valign="middle">#}
 {#                                    <font size="+600" color="#f5f5f5"><strong>Best District</strong></font></td>#}
-							  <td colspan="2" bgcolor="#7fc8ed" height="50" width="295" align="center" valign="middle" >
+{#							  <td colspan="2" bgcolor="#7fc8ed" height="50" width="295" align="center" valign="middle" >#}
 {#                                  <font size="+800" color="#f5f5f5"><strong id="value_best_dis" >Tai Po</strong></font>#}
-                                  <span style="font-size: 50px; font-family: 'Abadi MT Condensed Extra Bold',serif;color: #FFFFFF" id="value_best_dis">Central & Western</span>
-                              </td>
+{#                                  <span style="font-size: 50px; font-family: 'Abadi MT Condensed Extra Bold',serif;color: #FFFFFF" id="value_best_dis">Central & Western</span>#}
+{#                              </td>#}
 {#							  <td>@twitter</td>#}
-							</tr>
+{#							</tr>#}
+{#                            <tr>#}
+{#							  <td bgcolor="#7fc8ed" height="100" width="295" align="center" valign="middle">#}
+{#                                    <img src="http://images.rimanggis.com/resource/campaign/58e110a5c16f4b47d3bc0dea/images/CSvfp_population.png" style="width: 100px;" /></td>#}
+{#							  <td bgcolor="#7fc8ed" height="200" width="295" align="center" valign="middle" >#}
+{#                                  <font size="+800" color="#f5f5f5"><strong id="value_popu">9869</strong></font></td>#}
+{#                                <div id="data-box-popu" >#}
+{#                                  <span id="data-value-population"></span>#}
+{#                              </div>#}
+{#							</tr>#}
+{#							<tr>#}
+{#							  <td>2</td>#}
+{#							  <td bgcolor="#7fc8ed" height="100" width="295" align="center" valign="middle">#}
+{#                                    <img src="http://images.rimanggis.com/resource/campaign/58e110a5c16f4b47d3bc0dea/images/gU6aV_Area.png" style=" height: 100px;" /></td>#}
+{#							  <td bgcolor="#7fc8ed" height="200" width="295" align="center" valign="middle" >#}
+{#                                  <font size="+800" color="#f5f5f5"><strong id="value_area" >67</strong></font></td>#}
+{#							  <td>@fat</td>#}
+{#							</tr>#}
+{#                          <tr>#}
+{#							  <td>2</td>#}
+{#							  <td bgcolor="#7fc8ed" height="100" width="295" align="center" valign="middle">#}
+{#                                    <img src="http://images.rimanggis.com/resource/campaign/58e110a5c16f4b47d3bc0dea/images/E26g0_score.png" style="width: 100px; height: 98px;" /></td>#}
+{#							  <td bgcolor="#7fc8ed" height="200" width="295" align="center" valign="middle" >#}
+{#                                  <font size="+800" color="#f5f5f5"><strong id="value_area" >67</strong></font></td>#}
+{#                              <div id="data-box" >#}
+{#                                  <span id="data-value"></span>#}
+{#                              </div>#}
+{#                              </td>#}
+{#							  <td>@fat</td>#}
+{#							</tr>#}
+{##}
+{#						  </tbody>#}
+{#						</table>#}
+
+                        <table id="andy_table_1" >
+                            <tbody>
                             <tr>
-							  <td bgcolor="#7fc8ed" height="100" width="295" align="center" valign="middle">
-                                    <img src="http://images.rimanggis.com/resource/campaign/58e110a5c16f4b47d3bc0dea/images/CSvfp_population.png" style="width: 100px;" /></td>
-							  <td bgcolor="#7fc8ed" height="200" width="295" align="center" valign="middle" >
-                                  <font size="+800" color="#f5f5f5"><strong id="value_popu">9869</strong></font></td>
-							</tr>
-							<tr>
-{#							  <td>2</td>#}
-							  <td bgcolor="#7fc8ed" height="100" width="295" align="center" valign="middle">
-                                    <img src="http://images.rimanggis.com/resource/campaign/58e110a5c16f4b47d3bc0dea/images/gU6aV_Area.png" style=" height: 100px;" /></td>
-							  <td bgcolor="#7fc8ed" height="200" width="295" align="center" valign="middle" >
-                                  <font size="+800" color="#f5f5f5"><strong id="value_area" >67</strong></font></td>
-{#							  <td>@fat</td>#}
-							</tr>
-                          <tr>
-{#							  <td>2</td>#}
-							  <td bgcolor="#7fc8ed" height="100" width="295" align="center" valign="middle">
-                                    <img src="http://images.rimanggis.com/resource/campaign/58e110a5c16f4b47d3bc0dea/images/E26g0_score.png" style="width: 100px; height: 98px;" /></td>
-							  <td bgcolor="#7fc8ed" height="200" width="295" align="center" valign="middle" >
-                                  <font size="+800" color="#f5f5f5"><strong id="value_area" >67</strong></font></td>
-{#							  <td>@fat</td>#}
-							</tr>
+                                <td style="width: 198px;" valign="center" bgcolor="#7fc8ed">
+                                    <p class="small" style="text-align: right;">
+                                        <div id="data-box-district-ch" >
+                                        <span id="data-value-district-ch"></span>
+                                    </div>
+{#                                        <span style="color:#FFFFFF;"><span#}
+{#                                            style="font-family: 'LiHei Pro'; font-size: 72px;">荃灣</span></span></p>#}
+                                </td>
+                                <td style="width: 254px; text-align: right;" valign="bottom" bgcolor="#7fc8ed">
+                                    <p class="small" style="text-align: center;"><span style="color:#FFFFFF;"><span
+                                            style="font-family: 'Gloucester MT Extra Condensed'; font-size: 170px; text-align: right;">87</span></span>
+                                    </p>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
 
-						  </tbody>
-						</table>
+                        <table id="andy_table_2">
+                            <tbody bgcolor="#7fc8ed">
+                            <tr>
+                                <td style="width: 458px;" valign="top" bgcolor="#7fc8ed">
+                                    <p class="small" style="text-align: center;">
+                                        <div id="data-box-district-en" >
+                                        <span id="data-value-district-en"></span>
+                                    </div>
+{#                                        <span style="color:#FFFFFF;"><span#}
+{#                                            style="font-size: 80px;"><span#}
+{#                                            style="font-family: 'Abadi MT Condensed Extra Bold';">Tsuen Wan</span></span></span>#}
+                                    </p>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+{#                        </br>#}
+{#                        </br>#}
+                        <table id="andy_table_4">
+                            <tbody bgcolor="#7fc8ed">
+                            <tr>
+                                <td style="width: 458px;" valign="top" bgcolor="#7fc8ed">
+                                    <p class="small" style="text-align: center;"><span style="color:#FFFFFF;"><span
+                                            style="font-size: 80px;"><span
+                                            style="font-family: 'Abadi MT Condensed Extra Bold';"></span></span></span>
+                                    </p>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <table id="andy_table_3" border="0" cellpadding="1" cellspacing="1" style="width: 468px;">
+                            <tbody>
+                            <tr>
+                                <td bgcolor="#7fc8ed" style="width: 189px; text-align: center;"><span style="color:#FFFFFF;">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img
+                                        src="http://images.rimanggis.com/resource/campaign/58e110a5c16f4b47d3bc0dea/images/CSvfp_population.png"
+                                        style="width: 100px; height: 98px;"/></span></td>
+                                <td bgcolor="#7fc8ed" style="width: 266px;">
+                                    <div id="data-box-popu" >
+                                        <span id="data-value-population"></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#7fc8ed" style="width: 189px; text-align: center;"><span style="color:#FFFFFF;">&nbsp; &nbsp; &nbsp; &nbsp; <img
+                                        src="http://images.rimanggis.com/resource/campaign/58e110a5c16f4b47d3bc0dea/images/gU6aV_Area.png"
+                                        style="width: 100px; height: 98px;"/></span></td>
+                                <td bgcolor="#7fc8ed" style="width: 266px;">
+{#                                    <span style="color:#FFFFFF;"><span#}
+{#                                        style="font-family: &quot;Arial Black&quot;; font-size: 48px; text-align: center;">267</span></span>#}
+                                    <div id="data-box-area" >
+                                        <span id="data-value-area"></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#7fc8ed" style="width: 189px; text-align: center;"><span style="color:#FFFFFF;">&nbsp; &nbsp; &nbsp; &nbsp; <img
+                                        src="http://images.rimanggis.com/resource/campaign/58e110a5c16f4b47d3bc0dea/images/E26g0_score.png"
+                                        style="width: 100px; height: 98px;"/></span></td>
+                                <td bgcolor="#7fc8ed" style="width: 266px;">
+                                    <div id="data-box" >
+                                        <span id="data-value"></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <table id="andy_table_5">
+                            <tbody bgcolor="#7fc8ed">
+                            <tr>
+                                <td style="width: 458px;" valign="top" bgcolor="#7fc8ed">
+                                    <p class="small" style="text-align: center;"><span style="color:#FFFFFF;"><span
+                                            style="font-size: 80px;"><span
+                                            style="font-family: 'Abadi MT Condensed Extra Bold';"></span></span></span>
+                                    </p>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
 
-{#                        <p>-----====</p>#}
                     </div>
-                    <div class=" nobottommargin col_last">
-                    <div id="map" style="height: 1011px; margin-bottom: 20;" class="gmap"></div>
+                    <div class="nobottommargin col_last">
+                    <div id="map" style="height: 800px;" class="gmap"></div>
                     </div>
 
-{#                    <div class="container clearfix">#}
-{##}
-{#                        <p class="nobottommargin">Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam#}
-{#                            id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis#}
-{#                            dapibus posuere velit aliquet. Duis mollis, est non commodo luctus.Donec sed odio dui. Nulla#}
-{#                            vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit.#}
-{#                            Nulla vitae elit libero, a pharetra augue.</p>#}
-{##}
-{#                    </div>#}
+{#				</div>#}
 
+                <div class="row clearfix common-height">
+
+					<div class="col-md-3 col-sm-6 dark center col-padding" style="background-color: #809a89;">
+						<div>
+							<i class="i-plain i-xlarge divcenter icon-line2-home"></i>
+							<div class="counter counter-lined"><span id="" data-from="0" data-to="99" data-refresh-interval="50" data-speed="5000"></span><h1></h1></div>
+                            <h1>Housing</h1>
+						</div>
+					</div>
+                    <div class="col-md-3 col-sm-6 dark center col-padding" style="background-color: #809a89;">
+						<div>
+							<i class="i-plain i-xlarge divcenter icon-line2-basket"></i>
+							<div class="counter counter-lined"><span id="" data-from="0" data-to="99" data-refresh-interval="50" data-speed="5000"></span><h1></h1></div>
+							<h1>Cost of Living</h1>
+						</div>
+					</div>
+
+					<div class="col-md-3 col-sm-6 dark center col-padding" style="background-color: #809a89;">
+						<div>
+							<i class="i-plain i-xlarge divcenter icon-line2-graduation"></i>
+							<div class="counter counter-lined"><span id="" data-from="0" data-to="99" data-refresh-interval="50" data-speed="5000"></span><h1></h1></div>
+							<h1>Education</h1>
+						</div>
+					</div>
+
+					<div class="col-md-3 col-sm-6 dark center col-padding" style="background-color: #809a89;">
+						<div>
+							<i class="i-plain i-xlarge divcenter icon-line2-ghost"></i>
+							<div class="counter counter-lined"><span id="" data-from="0" data-to="99" data-refresh-interval="50" data-speed="5000"></span><h1></h1></div>
+							<h1>Crime</h1>
+						</div>
+					</div>
 
 				</div>
-{#                <div class=" center">#}
-                    {##}
-                    {##}
-{#                    							<span class="divcenter"></span>#}
-{#                    <h1>Scores of Various Criteria</h1>#}
-                    {#                            <br>#}
-                    {#                            <button class="btn btn-primary btn-lg side-panel-trigger">#}
-                    {#                                Find the Most Suitable Place for Home#}
-                    {#                            </button>#}
-                    {##}
-                    {##}
-{#                </div>#}
 
-
-                <div class="row clearfix bottommargin-lg common-height">
+                <div class="row clearfix common-height">
 
 					<div class="col-md-3 col-sm-6 dark center col-padding" style="background-color: #809a89;">
 						<div>
 							<i class="i-plain i-xlarge divcenter icon-line2-home"></i>
 							<div class="counter counter-lined"><span id="score_housing" data-from="0" data-to="99" data-refresh-interval="50" data-speed="5000"></span><h1></h1></div>
-                            <h1>Housing Cost</h1>
+                            <h1>Housing</h1>
 						</div>
 					</div>
                     <div class="col-md-3 col-sm-6 dark center col-padding" style="background-color: #809a89;">
 						<div>
 							<i class="i-plain i-xlarge divcenter icon-line2-basket"></i>
 							<div class="counter counter-lined"><span id="score_dining" data-from="0" data-to="99" data-refresh-interval="50" data-speed="5000"></span><h1></h1></div>
-							<h1>Dining Cost</h1>
+							<h1>Cost of Living</h1>
 						</div>
 					</div>
 
@@ -363,7 +478,7 @@
 						<div>
 							<i class="i-plain i-xlarge divcenter icon-line2-graduation"></i>
 							<div class="counter counter-lined"><span id="score_edu" data-from="0" data-to="99" data-refresh-interval="50" data-speed="5000"></span><h1></h1></div>
-							<h1>Education Rank</h1>
+							<h1>Education</h1>
 						</div>
 					</div>
 
@@ -371,193 +486,20 @@
 						<div>
 							<i class="i-plain i-xlarge divcenter icon-line2-ghost"></i>
 							<div class="counter counter-lined"><span id="score_cr" data-from="0" data-to="99" data-refresh-interval="50" data-speed="5000"></span><h1></h1></div>
-							<h1>Crime Rate</h1>
+							<h1>Crime</h1>
 						</div>
 					</div>
 
 				</div>
 
-			</div>
+{#			</div>#}
 
-
-
-
-
-{#            <div class="container clearfix">#}
-{##}
-{#					<div class="row topmargin-lg">#}
-{##}
-{#						<div class="heading-block center">#}
-{##}
-{##}
-{#							<span class="divcenter"></span>#}
-{#                            <h3>Find the Most Suitable Place for Home</h3>#}
-{#                            <br>#}
-{#                            <button class="btn btn-primary btn-lg side-panel-trigger">#}
-{#                                Preferences#}
-{#                            </button>#}
-{##}
-{##}
-{#                        </div>#}
-{##}
-{#                        <div class="col-md-3 col-sm-6 bottommargin">#}
-{##}
-{#							<div class="feature-box topmargin" data-animate="fadeIn" data-delay="100">#}
-{#								<div class="fbox-icon">#}
-{#									<a ><i class="icon-line-check"></i></a>#}
-{#								</div>#}
-{#								<h1 id="score_housing">90</h1>#}
-{#								<p>Score of <strong>Housing Cost</strong></p>#}
-{#							</div>#}
-{#						</div>#}
-{##}
-{#                        <div class="col-md-3 col-sm-6 bottommargin">#}
-{#							<div class="feature-box topmargin" data-animate="fadeIn" data-delay="200">#}
-{#								<div class="fbox-icon">#}
-{#									<a ><i class="icon-line-check"></i></a>#}
-{#								</div>#}
-{#								<h1 id="score_dining">90</h1>#}
-{#                                <p>Score of  <strong>Dining Cost</strong></p>#}
-{#							</div>#}
-{#						</div>#}
-{##}
-{#						<div class="col-md-3 col-sm-6 bottommargin">#}
-{##}
-{#							<div class="feature-box topmargin" data-animate="fadeIn" data-delay="300">#}
-{#								<div class="fbox-icon">#}
-{#									<a><i class="icon-line-check"></i></a>#}
-{#								</div>#}
-{#								<h1 id="score_edu">90</h1>#}
-{#								<p>Score of <strong>Education Ranking</strong></p>#}
-{#							</div>#}
-{##}
-{#							<div class="feature-box topmargin" data-animate="fadeIn" data-delay="200">#}
-{#								<div class="fbox-icon">#}
-{#									<a ><i class="icon-line-check"></i></a>#}
-{#								</div>#}
-{#								<h1>90</h1>#}
-{#								<p>Score of <strong>Employment</strong></p>#}
-{#							</div>#}
-{##}
-{##}
-{##}
-{#						</div>#}
-{#                        <div class="col-md-3 col-sm-6 bottommargin">#}
-{##}
-{#							<div class="feature-box topmargin" data-animate="fadeIn" data-delay="400">#}
-{#								<div class="fbox-icon">#}
-{#									<a ><i class="icon-line-check"></i></a>#}
-{#								</div>#}
-{#								<h1 id="score_cr">90</h1>#}
-{#								<p>Score of <strong>Crime Rate</strong></p>#}
-{#							</div>#}
-{##}
-{#							<div class="feature-box topmargin" data-animate="fadeIn" data-delay="200">#}
-{#								<div class="fbox-icon">#}
-{#									<a><i class="icon-line-check"></i></a>#}
-{#								</div>#}
-{#								<h1>90</h1>#}
-{#								<p>Score of <strong>Weather</strong></p>#}
-{#							</div>#}
-{##}
-{#							<div class="feature-box topmargin" data-animate="fadeIn" data-delay="400">#}
-{#								<div class="fbox-icon">#}
-{#									<a href="#"><i class="icon-bulb"></i></a>#}
-{#								</div>#}
-{#								<h3>Light &amp; Dark Color Schemes</h3>#}
-{#								<p>Change your Website's Primary Scheme instantly by simply adding the dark class.</p>#}
-{#							</div>#}
-{##}
-{#						</div>#}
-{##}
-{#					</div>#}
-{#                    <div class="row">#}
-{##}
-{#                            <div class="col-md-3 col-sm-6 bottommargin">#}
-{##}
-{#                                <div class="feature-box topmargin" data-animate="fadeIn" data-delay="100">#}
-{#                                    <div class="fbox-icon">#}
-{#                                        <a ><i class="icon-line-check"></i></a>#}
-{#                                    </div>#}
-{#                                    <h1>90</h1>#}
-{#                                    <p>Score of <strong>Housing Cost</strong></p>#}
-{#                                </div>#}
-{#                            </div>#}
-{##}
-{#                            <div class="col-md-3 col-sm-6 bottommargin">#}
-{#                                <div class="feature-box topmargin" data-animate="fadeIn" data-delay="200">#}
-{#                                    <div class="fbox-icon">#}
-{#                                        <a ><i class="icon-line-check"></i></a>#}
-{#                                    </div>#}
-{#                                    <h1>90</h1>#}
-{#                                    <p>Score of  <strong>Dining Cost</strong></p>#}
-{#                                </div>#}
-{#                            </div>#}
-{##}
-{#                            <div class="col-md-3 col-sm-6 bottommargin">#}
-{##}
-{#                                <div class="feature-box topmargin" data-animate="fadeIn" data-delay="300">#}
-{#                                    <div class="fbox-icon">#}
-{#                                        <a><i class="icon-line-check"></i></a>#}
-{#                                    </div>#}
-{#                                    <h1>90</h1>#}
-{#                                    <p>Score of <strong>Education Ranking</strong></p>#}
-{#                                </div>#}
-{##}
-    {#							<div class="feature-box topmargin" data-animate="fadeIn" data-delay="200">#}
-    {#								<div class="fbox-icon">#}
-    {#									<a ><i class="icon-line-check"></i></a>#}
-    {#								</div>#}
-    {#								<h1>90</h1>#}
-    {#								<p>Score of <strong>Employment</strong></p>#}
-    {#							</div>#}
-{##}
-{##}
-{##}
-{#                            </div>#}
-{#                            <div class="col-md-3 col-sm-6 bottommargin">#}
-{##}
-{#                                <div class="feature-box topmargin" data-animate="fadeIn" data-delay="400">#}
-{#                                    <div class="fbox-icon">#}
-{#                                        <a ><i class="icon-line-check"></i></a>#}
-{#                                    </div>#}
-{#                                    <h1>90</h1>#}
-{#                                    <p>Score of <strong>Crime Rate</strong></p>#}
-{#                                </div>#}
-{##}
-    {#							<div class="feature-box topmargin" data-animate="fadeIn" data-delay="200">#}
-    {#								<div class="fbox-icon">#}
-    {#									<a><i class="icon-line-check"></i></a>#}
-    {#								</div>#}
-    {#								<h1>90</h1>#}
-    {#								<p>Score of <strong>Weather</strong></p>#}
-    {#							</div>#}
-{##}
-    {#							<div class="feature-box topmargin" data-animate="fadeIn" data-delay="400">#}
-    {#								<div class="fbox-icon">#}
-    {#									<a href="#"><i class="icon-bulb"></i></a>#}
-    {#								</div>#}
-    {#								<h3>Light &amp; Dark Color Schemes</h3>#}
-    {#								<p>Change your Website's Primary Scheme instantly by simply adding the dark class.</p>#}
-    {#							</div>#}
-{##}
-{#                            </div>#}
-{##}
-{#                        </div>#}
-{##}
-{#				</div>#}
-{#            <div class="row clearfix bottommargin-lg common-height">#}
-{##}
-{#					<div class="col-md-12 col-sm-12 dark center col-padding" style="background-color: #515875;">#}
-{#						<div>#}
-{#							<i class="i-plain i-xlarge divcenter icon-line2-directions"></i>#}
-{#                            <div class="counter counter-lined"><span data-from="1" data-to="99" id="value_best_sco" data-refresh-interval="50" data-speed="2000"></span></div>#}
-{#							<h5 id="value_best_dis">Which is the best district for you?</h5>#}
-{#                            <br>#}
-{#						</div>#}
-{#					</div>#}
-{#				</div>#}
-            <div><iframe width="100%" height="800px" src="https://esrihk.maps.arcgis.com/apps/MapJournal/index.html?appid=c4cf5eafc03740c8b8c67a59c0e0777e" frameborder="0" scrolling="no"></iframe></div>
+                <div>
+                    <iframe width="100%" height="700px"
+                            src="https://esrihk.maps.arcgis.com/apps/MapJournal/index.html?appid=c4cf5eafc03740c8b8c67a59c0e0777e"
+                             scrolling="no">
+                    </iframe>
+                </div>
 
 		</section><!-- #content end -->
 
@@ -565,50 +507,50 @@
 		============================================= -->
 		<footer id="footer" class="dark noborder">
 
-			<div class="container center">
-				<div class="footer-widgets-wrap">
-
-					<div class="row divcenter clearfix">
-
-						<div class="col-md-4">
-
-							<div class="widget clearfix">
-								<h4>Site Links</h4>
-
-								<ul class="list-unstyled footer-site-links nobottommargin">
-									<li><a href="#" data-scrollto="#wrapper" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">Top</a></li>
-									<li><a href="#" data-scrollto="#section-works" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">Liveability on Map</a></li>
+{#			<div class="container center">#}
+{#				<div class="footer-widgets-wrap">#}
+{##}
+{#					<div class="row divcenter clearfix">#}
+{##}
+{#						<div class="col-md-4">#}
+{##}
+{#							<div class="widget clearfix">#}
+{#								<h4>Site Links</h4>#}
+{##}
+{#								<ul class="list-unstyled footer-site-links nobottommargin">#}
+{#									<li><a href="#" data-scrollto="#wrapper" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">Top</a></li>#}
+{#									<li><a href="#" data-scrollto="#section-works" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">Liveability on Map</a></li>#}
 {#                                    <li><a href="#" data-scrollto="#section-about" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">About</a></li>#}
-								</ul>
-							</div>
-
-						</div>
-
-						<div class="col-md-4">
-
-							<div class="widget subscribe-widget clearfix" data-loader="button">
-								<h4>Liveability in Hong Kong </h4>
-
-								<div class="widget-subscribe-form-result"></div>
-							</div>
-
-						</div>
-
-						<div class="col-md-4">
-
-							<div class="widget clearfix">
-								<h4>Contact</h4>
-
-								<p class="lead">Hong Kong Science Park<br>Data Studio</p>
-
-							</div>
-
-						</div>
-
-					</div>
-
-				</div>
-			</div>
+{#								</ul>#}
+{#							</div>#}
+{##}
+{#						</div>#}
+{##}
+{#						<div class="col-md-4">#}
+{##}
+{#							<div class="widget subscribe-widget clearfix" data-loader="button">#}
+{#								<h4>Liveability in Hong Kong </h4>#}
+{##}
+{#								<div class="widget-subscribe-form-result"></div>#}
+{#							</div>#}
+{##}
+{#						</div>#}
+{##}
+{#						<div class="col-md-4">#}
+{##}
+{#							<div class="widget clearfix">#}
+{#								<h4>Contact</h4>#}
+{##}
+{#								<p class="lead">Hong Kong Science Park<br>Data Studio</p>#}
+{##}
+{#							</div>#}
+{##}
+{#						</div>#}
+{##}
+{#					</div>#}
+{##}
+{#				</div>#}
+{#			</div>#}
 
 			<div id="copyrights">
 				<div class="container center clearfix">
@@ -750,7 +692,7 @@
 
         // load the map
         map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat: 22.356394, lng: 114.149139},
+            center: {lat: 22.356394, lng: 114.059139},
             zoom: 11,
             styles: mapStyle,
             scrollwheel: false
@@ -834,7 +776,11 @@
             censusData.forEach(function (row) {
                 var censusVariable = parseFloat(row[0]);
                 var stateId = row[1];
-                console.log(censusVariable)
+                var populationVariable = row[2];
+                var areaVariable = row[3];
+                var district_en_Variable = row[4];
+                var district_ch_Variable = row[5];
+                console.log(censusVariable);
 
                 // keep track of min and max values
                 if (censusVariable < censusMin) {
@@ -848,6 +794,20 @@
                 map.data
                     .getFeatureById(stateId)
                     .setProperty('census_variable', censusVariable);
+                map.data
+                    .getFeatureById(stateId)
+                    .setProperty('population_variable', populationVariable);
+                map.data
+                    .getFeatureById(stateId)
+                    .setProperty('area_variable', areaVariable);
+
+                map.data
+                    .getFeatureById(stateId)
+                    .setProperty('district_en_variable', district_en_Variable);
+
+                map.data
+                    .getFeatureById(stateId)
+                    .setProperty('district_ch_variable', district_ch_Variable);
             });
 
             // update and display the legend
@@ -867,6 +827,10 @@
             row.setProperty('census_variable', undefined);
         });
         document.getElementById('data-box').style.display = 'none';
+        document.getElementById('data-box-popu').style.display = 'none';
+        document.getElementById('data-box-area').style.display = 'none';
+        document.getElementById('data-box-district-en').style.display = 'none';
+        document.getElementById('data-box-district-ch').style.display = 'none';
         document.getElementById('data-caret').style.display = 'none';
     }
 
@@ -926,11 +890,34 @@
             (censusMax - censusMin) * 100;
 
         // update the label
-        document.getElementById('data-label').textContent =
-            e.feature.getProperty('name');
+{#        document.getElementById('data-label').textContent =#}
+{#            e.feature.getProperty('name');#}
+{#        document.getElementById('data-label').textContent = '';#}
         document.getElementById('data-value').textContent =
             e.feature.getProperty('census_variable');
+
+        document.getElementById('data-value-population').textContent =
+            e.feature.getProperty('population_variable');
+
+        document.getElementById('data-value-area').textContent =
+            e.feature.getProperty('area_variable');
+
+        document.getElementById('data-value-district-en').textContent =
+            e.feature.getProperty('district_en_variable');
+
+        document.getElementById('data-value-district-ch').textContent =
+            e.feature.getProperty('district_ch_variable');
+
+{#        console.log(document.getElementById('data-value').textContent)#}
+
+{#        document.getElementById('data-label-1').textContent = e.feature.getProperty('name');#}
+{#        document.getElementById('data-value-1').textContent = '';#}
+
         document.getElementById('data-box').style.display = 'block';
+        document.getElementById('data-box-popu').style.display = 'block';
+        document.getElementById('data-box-area').style.display = 'block';
+        document.getElementById('data-box-district-en').style.display = 'block';
+        document.getElementById('data-box-district-ch').style.display = 'block';
         document.getElementById('data-caret').style.display = 'block';
         document.getElementById('data-caret').style.paddingLeft = percent + '%';
     }
@@ -945,298 +932,7 @@
         e.feature.setProperty('state', 'normal');
     }
 
-    var styles = {
-        default: null,
-        silver: [
-            {
-                elementType: 'geometry',
-                stylers: [{color: '#f5f5f5'}]
-            },
-            {
-                elementType: 'labels.icon',
-                stylers: [{visibility: 'off'}]
-            },
-            {
-                elementType: 'labels.text.fill',
-                stylers: [{color: '#616161'}]
-            },
-            {
-                elementType: 'labels.text.stroke',
-                stylers: [{color: '#f5f5f5'}]
-            },
-            {
-                featureType: 'administrative.land_parcel',
-                elementType: 'labels.text.fill',
-                stylers: [{color: '#bdbdbd'}]
-            },
-            {
-                featureType: 'poi',
-                elementType: 'geometry',
-                stylers: [{color: '#eeeeee'}]
-            },
-            {
-                featureType: 'poi',
-                elementType: 'labels.text.fill',
-                stylers: [{color: '#757575'}]
-            },
-            {
-                featureType: 'poi.park',
-                elementType: 'geometry',
-                stylers: [{color: '#e5e5e5'}]
-            },
-            {
-                featureType: 'poi.park',
-                elementType: 'labels.text.fill',
-                stylers: [{color: '#9e9e9e'}]
-            },
-            {
-                featureType: 'road',
-                elementType: 'geometry',
-                stylers: [{color: '#ffffff'}]
-            },
-            {
-                featureType: 'road.arterial',
-                elementType: 'labels.text.fill',
-                stylers: [{color: '#757575'}]
-            },
-            {
-                featureType: 'road.highway',
-                elementType: 'geometry',
-                stylers: [{color: '#dadada'}]
-            },
-            {
-                featureType: 'road.highway',
-                elementType: 'labels.text.fill',
-                stylers: [{color: '#616161'}]
-            },
-            {
-                featureType: 'road.local',
-                elementType: 'labels.text.fill',
-                stylers: [{color: '#9e9e9e'}]
-            },
-            {
-                featureType: 'transit.line',
-                elementType: 'geometry',
-                stylers: [{color: '#e5e5e5'}]
-            },
-            {
-                featureType: 'transit.station',
-                elementType: 'geometry',
-                stylers: [{color: '#eeeeee'}]
-            },
-            {
-                featureType: 'water',
-                elementType: 'geometry',
-                stylers: [{color: '#c9c9c9'}]
-            },
-            {
-                featureType: 'water',
-                elementType: 'labels.text.fill',
-                stylers: [{color: '#9e9e9e'}]
-            }
-        ],
-        night: [
-            {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
-            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
-            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
-            {
-                featureType: 'administrative.locality',
-                elementType: 'labels.text.fill',
-                stylers: [{color: '#d59563'}]
-            },
-            {
-                featureType: 'poi',
-                elementType: 'labels.text.fill',
-                stylers: [{color: '#d59563'}]
-            },
-            {
-                featureType: 'poi.park',
-                elementType: 'geometry',
-                stylers: [{color: '#263c3f'}]
-            },
-            {
-                featureType: 'poi.park',
-                elementType: 'labels.text.fill',
-                stylers: [{color: '#6b9a76'}]
-            },
-            {
-                featureType: 'road',
-                elementType: 'geometry',
-                stylers: [{color: '#38414e'}]
-            },
-            {
-                featureType: 'road',
-                elementType: 'geometry.stroke',
-                stylers: [{color: '#212a37'}]
-            },
-            {
-                featureType: 'road',
-                elementType: 'labels.text.fill',
-                stylers: [{color: '#9ca5b3'}]
-            },
-            {
-                featureType: 'road.highway',
-                elementType: 'geometry',
-                stylers: [{color: '#746855'}]
-            },
-            {
-                featureType: 'road.highway',
-                elementType: 'geometry.stroke',
-                stylers: [{color: '#1f2835'}]
-            },
-            {
-                featureType: 'road.highway',
-                elementType: 'labels.text.fill',
-                stylers: [{color: '#f3d19c'}]
-            },
-            {
-                featureType: 'transit',
-                elementType: 'geometry',
-                stylers: [{color: '#2f3948'}]
-            },
-            {
-                featureType: 'transit.station',
-                elementType: 'labels.text.fill',
-                stylers: [{color: '#d59563'}]
-            },
-            {
-                featureType: 'water',
-                elementType: 'geometry',
-                stylers: [{color: '#17263c'}]
-            },
-            {
-                featureType: 'water',
-                elementType: 'labels.text.fill',
-                stylers: [{color: '#515c6d'}]
-            },
-            {
-                featureType: 'water',
-                elementType: 'labels.text.stroke',
-                stylers: [{color: '#17263c'}]
-            }
-        ],
-        retro: [
-            {elementType: 'geometry', stylers: [{color: '#ebe3cd'}]},
-            {elementType: 'labels.text.fill', stylers: [{color: '#523735'}]},
-            {elementType: 'labels.text.stroke', stylers: [{color: '#f5f1e6'}]},
-            {
-                featureType: 'administrative',
-                elementType: 'geometry.stroke',
-                stylers: [{color: '#c9b2a6'}]
-            },
-            {
-                featureType: 'administrative.land_parcel',
-                elementType: 'geometry.stroke',
-                stylers: [{color: '#dcd2be'}]
-            },
-            {
-                featureType: 'administrative.land_parcel',
-                elementType: 'labels.text.fill',
-                stylers: [{color: '#ae9e90'}]
-            },
-            {
-                featureType: 'landscape.natural',
-                elementType: 'geometry',
-                stylers: [{color: '#dfd2ae'}]
-            },
-            {
-                featureType: 'poi',
-                elementType: 'geometry',
-                stylers: [{color: '#dfd2ae'}]
-            },
-            {
-                featureType: 'poi',
-                elementType: 'labels.text.fill',
-                stylers: [{color: '#93817c'}]
-            },
-            {
-                featureType: 'poi.park',
-                elementType: 'geometry.fill',
-                stylers: [{color: '#a5b076'}]
-            },
-            {
-                featureType: 'poi.park',
-                elementType: 'labels.text.fill',
-                stylers: [{color: '#447530'}]
-            },
-            {
-                featureType: 'road',
-                elementType: 'geometry',
-                stylers: [{color: '#f5f1e6'}]
-            },
-            {
-                featureType: 'road.arterial',
-                elementType: 'geometry',
-                stylers: [{color: '#fdfcf8'}]
-            },
-            {
-                featureType: 'road.highway',
-                elementType: 'geometry',
-                stylers: [{color: '#f8c967'}]
-            },
-            {
-                featureType: 'road.highway',
-                elementType: 'geometry.stroke',
-                stylers: [{color: '#e9bc62'}]
-            },
-            {
-                featureType: 'road.highway.controlled_access',
-                elementType: 'geometry',
-                stylers: [{color: '#e98d58'}]
-            },
-            {
-                featureType: 'road.highway.controlled_access',
-                elementType: 'geometry.stroke',
-                stylers: [{color: '#db8555'}]
-            },
-            {
-                featureType: 'road.local',
-                elementType: 'labels.text.fill',
-                stylers: [{color: '#806b63'}]
-            },
-            {
-                featureType: 'transit.line',
-                elementType: 'geometry',
-                stylers: [{color: '#dfd2ae'}]
-            },
-            {
-                featureType: 'transit.line',
-                elementType: 'labels.text.fill',
-                stylers: [{color: '#8f7d77'}]
-            },
-            {
-                featureType: 'transit.line',
-                elementType: 'labels.text.stroke',
-                stylers: [{color: '#ebe3cd'}]
-            },
-            {
-                featureType: 'transit.station',
-                elementType: 'geometry',
-                stylers: [{color: '#dfd2ae'}]
-            },
-            {
-                featureType: 'water',
-                elementType: 'geometry.fill',
-                stylers: [{color: '#b9d3c2'}]
-            },
-            {
-                featureType: 'water',
-                elementType: 'labels.text.fill',
-                stylers: [{color: '#92998d'}]
-            }
-        ],
-        hiding: [
-            {
-                featureType: 'poi.business',
-                stylers: [{visibility: 'off'}]
-            },
-            {
-                featureType: 'transit',
-                elementType: 'labels.icon',
-                stylers: [{visibility: 'off'}]
-            }
-        ]
-    };
+
 
 </script>
 <script async defer
