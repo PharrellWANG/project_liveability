@@ -68,38 +68,48 @@
                             <div class="form-body">
                                 <br>
                                 <br>
-
                                 <div class="white-section">
-{#                                    <label>Housing Cost</label>#}
-                                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="drag it to right if you prefer a lower price for buying house.">Housing Cost</button>
-{#                                    <span>drag it to right if you don't like spending a lot to buy a house</span>#}
+                                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="drag it to right if you prefer a lower price for buying house.">Housing</button>
                                     <input class="range_01" id="id_rang_01" type="text" name="housing_cost" value=""/>
                                 </div>
 
                                 <div class="white-section">
-{#                                    <label>Dining Cost</label>#}
-                                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="drag it to right if you prefer a lower price for '兩餸一湯'.">Dining Cost</button>
+                                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="drag it to right if you prefer a lower price for '兩餸一湯'.">Cost of Living</button>
                                     <input class="range_002" id="id_rang_02" type="text" name="dining_cost" value=""/>
                                 </div>
 
                                 <div class="white-section">
-{#                                    <label>Education Ranking</label>#}
-                                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="drag it to right if you have kids.">Education Ranking</button>
+                                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="drag it to right if you have kids.">Education </button>
                                     <input class="range_003" id="id_rang_03" type="text" name="education_ranking" value=""/>
                                 </div>
 
                                 <div class="white-section">
-{#                                    <label>Crime Rate</label>#}
-                                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="drag it to right if you want to live in a district of low crime rate.">Crime Rate Ranking</button>
+                                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="drag it to right if you want to live in a district of low crime rate.">Crime Rate</button>
                                     <input class="range_004" id="id_rang_04" type="text" name="crime_rate" value=""/>
                                 </div>
+
+                                <div class="white-section">
+                                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="drag it to right if you prefer a higher employment rate.">Cost of Living</button>
+                                    <input class="range_005" id="id_rang_05" type="text" name="employment" value=""/>
+                                </div>
+
+                                <div class="white-section">
+                                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="drag it to right if you want to live in a district of high air quality.">Air Quality</button>
+                                    <input class="range_006" id="id_rang_06" type="text" name="air_quality" value=""/>
+                                </div>
+
+                                <div class="white-section">
+                                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="drag it to right if you want to live in a district with more amenities.">Amenities</button>
+                                    <input class="range_007" id="id_rang_07" type="text" name="amenities" value=""/>
+                                </div>
+
                             </div>
                             <div class="form-actions">
                                 <div class="row">
                                     <div class="center">
                                         <br>
                                         <button type="submit" class="btn btn-primary "
-                                                id="invest_now">Save</button>
+                                                >Save</button>
                                     </div>
                                 </div>
                             </div>
@@ -452,8 +462,8 @@
 					<div class="col-md-3 col-sm-6 dark center col-padding" style="background-color: #5d97b9;">
 						<div>
 							<i class="i-plain i-xlarge divcenter icon-line2-ghost"></i>
-							<div class="counter counter-lined"><span id="" data-from="0" data-to="99" data-refresh-interval="50" data-speed="5000"></span><h1></h1></div>
-							<h1>Crime</h1>
+							<div class="counter counter-lined"><span id="amenities" data-from="0" data-to="99" data-refresh-interval="50" data-speed="5000"></span><h1></h1></div>
+							<h1>Amenities</h1>
 						</div>
 					</div>
 
@@ -496,12 +506,12 @@
 
 {#			</div>#}
 
-{#                <div>#}
-{#                    <iframe width="100%" height="700px"#}
-{#                            src="https://esrihk.maps.arcgis.com/apps/MapJournal/index.html?appid=c4cf5eafc03740c8b8c67a59c0e0777e"#}
-{#                             scrolling="no">#}
-{#                    </iframe>#}
-{#                </div>#}
+                <div>
+                    <iframe width="100%" height="700px"
+                            src="https://esrihk.maps.arcgis.com/apps/MapJournal/index.html?appid=c4cf5eafc03740c8b8c67a59c0e0777e"
+                             scrolling="no">
+                    </iframe>
+                </div>
 
 		</section><!-- #content end -->
 
@@ -783,7 +793,7 @@
                 var district_en_Variable = row[4];
                 var district_ch_Variable = row[5];
                 var scoreVariable = row[6]
-                console.log(censusVariable);
+{#                console.log(censusVariable);#}
 
                 // keep track of min and max values
                 if (censusVariable < censusMin) {
