@@ -9,6 +9,8 @@ class Scores(models.Model):
     district_ch = models.CharField(max_length=45, null=True)
     score_of_liveability = models.IntegerField(null=True)
     house_cost = models.IntegerField(null=True)
+    employment = models.IntegerField(null=True)
+    air_quality = models.IntegerField(null=True)
     dining_cost = models.IntegerField(null=True)
     crime_rate = models.IntegerField(null=True)
     edu_rank = models.IntegerField(null=True)
