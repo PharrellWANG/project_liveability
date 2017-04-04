@@ -445,7 +445,7 @@
 					</div>
                     <div class="col-md-3 col-sm-6 dark center col-padding" style="background-color: #5d97b9;">
 						<div>
-							<i class="i-plain i-xlarge divcenter icon-line2-basket"></i>
+							<i class="i-plain i-xlarge divcenter icon-line2-user-following"></i>
 							<div class="counter counter-lined"><span id="employment" data-from="0" data-to="99" data-refresh-interval="50" data-speed="5000"></span><h1></h1></div>
 							<h1>Employment</h1>
 						</div>
@@ -453,7 +453,7 @@
 
 					<div class="col-md-3 col-sm-6 dark center col-padding" style="background-color: #5d97b9;">
 						<div>
-							<i class="i-plain i-xlarge divcenter icon-line2-graduation"></i>
+							<i class="i-plain i-xlarge divcenter icon-line2-refresh"></i>
 							<div class="counter counter-lined"><span id="air_quality" data-from="0" data-to="99" data-refresh-interval="50" data-speed="5000"></span><h1></h1></div>
 							<h1>Air Quality</h1>
 						</div>
@@ -461,7 +461,7 @@
 
 					<div class="col-md-3 col-sm-6 dark center col-padding" style="background-color: #5d97b9;">
 						<div>
-							<i class="i-plain i-xlarge divcenter icon-line2-ghost"></i>
+							<i class="i-plain i-xlarge divcenter icon-line2-grid"></i>
 							<div class="counter counter-lined"><span id="amenities" data-from="0" data-to="99" data-refresh-interval="50" data-speed="5000"></span><h1></h1></div>
 							<h1>Amenities</h1>
 						</div>
@@ -766,20 +766,20 @@
         var xhr = new XMLHttpRequest();
         {#        xhr.open('GET', variable + '.json');#}
         if (variable == "liangsongyitang") {
-{#            xhr.open('GET', 'http://202.130.117.30:8081/tdone_api/');#}
-            xhr.open('GET', 'http://192.168.243.134:1234/tdone_api/');
+            xhr.open('GET', 'http://202.130.117.30:8081/tdone_api/');
+{#            xhr.open('GET', 'http://192.168.243.134:1234/tdone_api/');#}
         }
         else if (variable == "edu") {
-{#            xhr.open('GET', 'http://202.130.117.30:8081/edu_api/');#}
-            xhr.open('GET', 'http://192.168.243.134:1234/edu_api/');
+            xhr.open('GET', 'http://202.130.117.30:8081/edu_api/');
+{#            xhr.open('GET', 'http://192.168.243.134:1234/edu_api/');#}
         }
         else if (variable == "house") {
-{#            xhr.open('GET', 'http://202.130.117.30:8081/hp_api/');#}
-            xhr.open('GET', 'http://192.168.243.134:1234/hp_api/');
+            xhr.open('GET', 'http://202.130.117.30:8081/hp_api/');
+{#            xhr.open('GET', 'http://192.168.243.134:1234/hp_api/');#}
         }
         else if (variable == "cr") {
-{#            xhr.open('GET', 'http://202.130.117.30:8081/cr_api/');#}
-            xhr.open('GET', 'http://192.168.243.134:1234/cr_api/');
+            xhr.open('GET', 'http://202.130.117.30:8081/cr_api/');
+{#            xhr.open('GET', 'http://192.168.243.134:1234/cr_api/');#}
         }
 
         xhr.onload = function () {
