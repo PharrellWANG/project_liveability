@@ -9,6 +9,7 @@ class Scores(models.Model):
     district_ch = models.CharField(max_length=45, null=True)
     score_of_liveability = models.IntegerField(null=True)
     house_cost = models.IntegerField(null=True)
+    amenities = models.IntegerField(null=True)
     employment = models.IntegerField(null=True)
     air_quality = models.IntegerField(null=True)
     dining_cost = models.IntegerField(null=True)
@@ -82,3 +83,28 @@ class Weather(models.Model):
     district_ch = models.CharField(max_length=10, null=True)
     district_en = models.CharField(max_length=50, null=True)
     air_quality_health_index = models.FloatField(null=True)
+
+
+class Amenities(models.Model):
+    district_ch = models.CharField(max_length=10, null=True)
+    district_en = models.CharField(max_length=50, null=True)
+    number_of_711 = models.FloatField(null=True)
+
+
+class SevenElevenStore(models.Model):
+    district_en = models.CharField(max_length=45, null=True)
+    district_ch = models.CharField(max_length=45, null=True)
+    fake_district_tc = models.CharField(max_length=45, null=True)
+    fake_district_en = models.CharField(max_length=45, null=True)
+
+    address_tc = models.CharField(max_length=500, null=True)
+    address_en = models.CharField(max_length=500, null=True)
+
+    is_24_hour = models.CharField(max_length=500, null=True)
+    is_active = models.CharField(max_length=500, null=True)
+
+    lat = models.FloatField(null=True)
+    lng = models.FloatField(null=True)
+    accurate = models.FloatField(null=True)
+
+    region = models.CharField(max_length=500, null=True)
