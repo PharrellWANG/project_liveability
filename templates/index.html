@@ -89,7 +89,7 @@
                                 </div>
 
                                 <div class="white-section">
-                                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="drag it to right if you prefer a higher employment rate.">Cost of Living</button>
+                                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="drag it to right if you prefer a higher employment rate.">Employment</button>
                                     <input class="range_005" id="id_rang_05" type="text" name="employment" value=""/>
                                 </div>
 
@@ -239,6 +239,15 @@
                                 </option>
                                 <option value="cr">
                                     Crime
+                                </option>
+                                <option value="employment">
+                                    Employment
+                                </option>
+                                <option value="amenities">
+                                    Amenities
+                                </option>
+                                <option value="aq">
+                                    Air Quality
                                 </option>
                             </select>
                         </div>
@@ -593,7 +602,7 @@
     <script type="text/javascript" src="{% static '' %}my_js/ajax.js"></script>
     <script type="text/javascript" src="{% static '' %}my_js/multi_slider.js"></script>
 <script>
-    var mapStyle = [
+    var mapStyle =[
     {
         "featureType": "all",
         "elementType": "labels",
@@ -766,20 +775,32 @@
         var xhr = new XMLHttpRequest();
         {#        xhr.open('GET', variable + '.json');#}
         if (variable == "liangsongyitang") {
-            xhr.open('GET', 'http://202.130.117.30:8081/tdone_api/');
-{#            xhr.open('GET', 'http://192.168.243.134:1234/tdone_api/');#}
+{#            xhr.open('GET', 'http://202.130.117.30:8081/tdone_api/');#}
+            xhr.open('GET', 'http://192.168.243.134:1234/tdone_api/');
         }
         else if (variable == "edu") {
-            xhr.open('GET', 'http://202.130.117.30:8081/edu_api/');
-{#            xhr.open('GET', 'http://192.168.243.134:1234/edu_api/');#}
+{#            xhr.open('GET', 'http://202.130.117.30:8081/edu_api/');#}
+            xhr.open('GET', 'http://192.168.243.134:1234/edu_api/');
         }
         else if (variable == "house") {
-            xhr.open('GET', 'http://202.130.117.30:8081/hp_api/');
-{#            xhr.open('GET', 'http://192.168.243.134:1234/hp_api/');#}
+{#            xhr.open('GET', 'http://202.130.117.30:8081/hp_api/');#}
+            xhr.open('GET', 'http://192.168.243.134:1234/hp_api/');
         }
         else if (variable == "cr") {
-            xhr.open('GET', 'http://202.130.117.30:8081/cr_api/');
-{#            xhr.open('GET', 'http://192.168.243.134:1234/cr_api/');#}
+{#            xhr.open('GET', 'http://202.130.117.30:8081/cr_api/');#}
+            xhr.open('GET', 'http://192.168.243.134:1234/cr_api/');
+        }
+        else if (variable == "employment") {
+{#            xhr.open('GET', 'http://202.130.117.30:8081/employment_api/');#}
+            xhr.open('GET', 'http://192.168.243.134:1234/employment_api/');
+        }
+        else if (variable == "amenities") {
+{#            xhr.open('GET', 'http://202.130.117.30:8081/amenities_api/');#}
+            xhr.open('GET', 'http://192.168.243.134:1234/amenities_api/');
+        }
+        else if (variable == "aq") {
+{#            xhr.open('GET', 'http://202.130.117.30:8081/aq_api/');#}
+            xhr.open('GET', 'http://192.168.243.134:1234/aq_api/');
         }
 
         xhr.onload = function () {
