@@ -228,26 +228,26 @@
 
 
                                 <option value="house">
-                                    Housing
+                                    Housing &nbsp (left means a high housing price)
                                 </option>
                                 <option value="liangsongyitang">
 {#                                    2016 年「兩餸一湯」平均價格#}
-                                    Cost of Living
+                                    Cost of Living &nbsp (left means a high cost of living)
                                 </option>
                                 <option value="edu">
-                                    Education
+                                    Education &nbsp (left means a low education rank)
                                 </option>
                                 <option value="cr">
-                                    Crime
+                                    Crime &nbsp (left means a high crime rate)
                                 </option>
                                 <option value="employment">
-                                    Employment
+                                    Employment &nbsp (left means a low employment)
                                 </option>
                                 <option value="amenities">
-                                    Amenities
+                                    Amenities &nbsp  (left means less amenities)
                                 </option>
                                 <option value="aq">
-                                    Air Quality
+                                    Air Quality &nbsp  (left means worse air quality)
                                 </option>
                             </select>
                         </div>
@@ -880,6 +880,9 @@
     function styleFeature(feature) {
         var high = [5, 69, 54];  // color of smallest datum
         var low = [151, 83, 34];   // color of largest datum
+
+{#        var high = [140, 81, 10];  // color of smallest datum#}
+{#        var low = [191, 129, 45];   // color of largest datum#}
 
         // delta represents where the value sits between the min and max
         var delta = (feature.getProperty('census_variable') - censusMin) /
