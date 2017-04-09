@@ -27,7 +27,18 @@
 
 	<link rel="stylesheet" href="{% static '' %}canvas/css/responsive.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>td {text-align:center; vertical-align:middle;}</style>
+    <style>
+        td {text-align:center; vertical-align:middle;}
+
+        @font-face {
+            font-family: sansumi-bold; src: url({% static '' %}"fonts/sansumi/Sansumi-Bold.ttf");
+        }
+
+        .myownfont{
+            font-family: sansumi-bold
+        }
+
+    </style>
 	<!--[if lt IE 9]>
 	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 	<![endif]-->
@@ -184,7 +195,7 @@
 							<div class="emphasis-title">
 								<h1>
 									<span class="text-rotater nocolor" data-separator="|" data-rotate="fadeIn" data-speed="3000">
-										<span class="t-rotate t400 font-body opm-large-word">Welcome to Liveability | A Journey of Discovering</span>
+										<span class="t-rotate t400 myownfont " >Find My Place | Website to help you find the best place to live</span>
 									</span>
 								</h1>
 							</div>
@@ -347,7 +358,7 @@
                                 <td bgcolor="#7fc8ed">
                                     <p class="small">
 {#                                    <div id="data-box-score-liveability">#}
-                                        <div id="data-value-score-liveability" bgcolor="#7fc8ed"></div>
+                                        <div id="data-value-score-liveability" bgcolor="#7fc8ed" class="myownfont"></div>
 {#                                    </div>#}
                                 </td>
                             </tr>
@@ -362,7 +373,7 @@
 {#                                        <div id="data-box-district-en" >#}
 {#                                        <span id="data-value-district-en"></span>#}
 {#                                        </div>#}
-                                    <div id="data-value-district-en" >
+                                    <div id="data-value-district-en" class="myownfont" >
 {#                                        <span id="data-value-district-en"></span>#}
                                         </div>
 {#                                        <span style="color:#FFFFFF;"><span#}
