@@ -786,32 +786,32 @@
         var xhr = new XMLHttpRequest();
         {#        xhr.open('GET', variable + '.json');#}
         if (variable == "liangsongyitang") {
-{#            xhr.open('GET', 'http://202.130.117.30:8081/tdone_api/');#}
             xhr.open('GET', 'http://192.168.243.134:1234/tdone_api/');
+{#            xhr.open('GET', 'http://59.148.200.66:1234/tdone_api/');#}
         }
         else if (variable == "edu") {
-{#            xhr.open('GET', 'http://202.130.117.30:8081/edu_api/');#}
             xhr.open('GET', 'http://192.168.243.134:1234/edu_api/');
+{#            xhr.open('GET', 'http://59.148.200.66:1234/edu_api/');#}
         }
         else if (variable == "house") {
-{#            xhr.open('GET', 'http://202.130.117.30:8081/hp_api/');#}
             xhr.open('GET', 'http://192.168.243.134:1234/hp_api/');
+{#            xhr.open('GET', 'http://59.148.200.66:1234/hp_api/');#}
         }
         else if (variable == "cr") {
-{#            xhr.open('GET', 'http://202.130.117.30:8081/cr_api/');#}
             xhr.open('GET', 'http://192.168.243.134:1234/cr_api/');
+{#            xhr.open('GET', 'http://59.148.200.66:1234/cr_api/');#}
         }
         else if (variable == "employment") {
-{#            xhr.open('GET', 'http://202.130.117.30:8081/employment_api/');#}
             xhr.open('GET', 'http://192.168.243.134:1234/employment_api/');
+{#            xhr.open('GET', 'http://59.148.200.66:1234/employment_api/');#}
         }
         else if (variable == "amenities") {
-{#            xhr.open('GET', 'http://202.130.117.30:8081/amenities_api/');#}
             xhr.open('GET', 'http://192.168.243.134:1234/amenities_api/');
+{#            xhr.open('GET', 'http://59.148.200.66:1234/amenities_api/');#}
         }
         else if (variable == "aq") {
-{#            xhr.open('GET', 'http://202.130.117.30:8081/aq_api/');#}
             xhr.open('GET', 'http://192.168.243.134:1234/aq_api/');
+{#            xhr.open('GET', 'http://59.148.200.66:1234/aq_api/');#}
         }
 
         xhr.onload = function () {
